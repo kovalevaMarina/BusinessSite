@@ -25,13 +25,47 @@
     flex-wrap: wrap;
 }
 
+.flex-container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 body {
     font-family: "Lato", sans-serif;
     font-size: $txt-main;
     line-height: $txt-main-ln-height;
     font-weight: 400;
 }
+
+.btn {
+    display: inline-block;
+    font-size: $txt-btn;
+    line-height: $txt-btn-ln-height;
+    font-weight: 400;
+    color: $white;
+    background-color: $orange;
+    transition: $transition-time;
+    &:hover {
+        background-color: $grey;
+    }
+}
 // styles for text 
+
+.title-h2 {
+ font-size: $fs-h2;
+ line-height: $h2-ln-height;
+ font-weight: 900;
+ color: $grey-dark;
+ text-align: center;
+}
 
 .txt--uppercase {
     text-transform: uppercase;
@@ -42,6 +76,13 @@ body {
     line-height: $txt-description-ln-height;
     font-weight: 400;
     color: $grey-dark;
+    text-align: center;
+}
+
+.title-h1 {
+    font-size: $fs-h1;
+    line-height: $h1-ln-height;
+    font-weight: 900;
 }
 
 // styles for header section
@@ -76,3 +117,107 @@ body {
         color: $white;
     }
 }
+
+// styles for promo section
+
+.promo {
+    padding-top: 82px;
+    margin-bottom: 74px;
+    background: linear-gradient(180deg, $blue 85%, $white 15%);
+    &__title {
+        margin-bottom: 16px;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: 27px;
+        color: $white;
+        text-align: center;
+    }
+
+    &-form {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 67px;
+    }
+
+    &-btn {
+        padding: 15px 42px;
+        margin-bottom: 10px;
+    }
+}
+
+.form-input {
+    width: 281px;
+    font-size: $txt-main;
+    line-height: $txt-main-ln-height;
+    color: $grey-white;
+    padding: 15px 12px 15px 40px;
+    border: none;
+    border: 2px solid transparent;
+    margin: 0 10px 10px 0;
+    &__img {
+        background-repeat: no-repeat;
+        background-position: 5%;
+        &--person {
+            background-image: url("../assets/svg/rerson_icon.svg");
+        }
+        &--email {
+            background-image: url("../assets/svg/email_icon.svg");
+        }
+        &--phone {
+            background-image: url("../assets/svg/phone_icon.svg");
+        }
+    }
+
+    &:focus {
+        outline: none;
+        border: 2px solid $orange;
+    }
+}
+
+.laptop-wrap {
+    max-width: 647px;
+    &__img {
+        margin-bottom: 23px;
+    }
+}
+
+.laptop-img {
+    width: 100%;
+}
+
+.buttons-circle {
+    .buttons-circle__icon {
+        margin-right: 9px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__icon {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid $grey-extra-white;
+        background-color: $white;
+        transition: $transition-time;
+        &--active {
+            border: 2px solid $blue-white;
+        }
+    }
+}
+
+// styles for service section
+
+.service {
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin-bottom: 84px;
+    }
+}
+

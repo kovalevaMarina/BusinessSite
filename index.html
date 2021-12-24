@@ -33,7 +33,7 @@
                   <a class="menu-list__link" href="#">Home</a>
                 </li>
                 <li class="menu-list__item">
-                  <a class="menu-list__link" href="#">Service</a>
+                  <a class="menu-list__link" href="#service">Service</a>
                 </li>
                 <li class="menu-list__item">
                   <a class="menu-list__link" href="#">About us</a>
@@ -55,7 +55,68 @@
           </div>
         </div>
       </header>
-      <main class="main-section"></main>
+      <main class="main-section">
+        <section class="promo">
+          <div class="container">
+            <div class="flex-container-column">
+              <h1 class="title-h1 promo__title">
+                Boost up your local business
+              </h1>
+              <p class="promo__text text-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum typesetting
+              </p>
+              <form class="form promo-form" action="https://fom.in.ua/echo">
+                <input
+                  class="form-input form-input__img form-input__img--person"
+                  name="full_name"
+                  type="text"
+                  placeholder="Full Name"
+                />
+                <input
+                  class="form-input form-input__img form-input__img--email"
+                  name="email"
+                  type="email"
+                  placeholder="Email Address"
+                />
+                <input
+                  class="form-input form-input__img form-input__img--phone"
+                  name="number_phone"
+                  type="tel"
+                  placeholder="Phone Number"
+                />
+                <button class="btn promo-btn txt--uppercase" type="submit">
+                  Request a quote
+                </button>
+              </form>
+              <div class="laptop-wrap">
+                <div class="laptop-wrap__img">
+                  <img
+                    class="laptop-img"
+                    src="./assets/img/laptop.png"
+                    alt="Изображение ноутбука"
+                  />
+                </div>
+                <div class="buttons-circle flex-container-center">
+                  <button
+                    class="buttons-circle__icon buttons-circle__icon--active"
+                  ></button>
+                  <button class="buttons-circle__icon"></button>
+                  <button class="buttons-circle__icon"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="service" id="service">
+          <div class="container">
+            <h2 class="title-h2 service__title txt--uppercase">Our services</h2>
+            <p class="service__text text-description">
+              Lorem Ipsum is simply dummy Business industry.
+            </p>
+          </div>
+        </section>
+      </main>
       <footer class="footer"></footer>
     </div>
   </body>

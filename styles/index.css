@@ -138,6 +138,11 @@ a {
   cursor: pointer;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 .main-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,6 +180,33 @@ a {
       flex-wrap: wrap;
 }
 
+.flex-container-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-container-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 13px;
@@ -182,15 +214,45 @@ body {
   font-weight: 400;
 }
 
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #ffbb42;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #868686;
+}
+
+.title-h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 900;
+  color: #394b50;
+  text-align: center;
+}
+
 .txt--uppercase {
   text-transform: uppercase;
 }
 
 .text-description {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 29px;
   font-weight: 400;
   color: #394b50;
+  text-align: center;
+}
+
+.title-h1 {
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 900;
 }
 
 .logo-wrap {
@@ -226,4 +288,113 @@ body {
 .menu-list__link:hover {
   background-color: #ffbb42;
   color: #ffffff;
+}
+
+.promo {
+  padding-top: 82px;
+  margin-bottom: 74px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(85%, #709dca), color-stop(15%, #ffffff));
+  background: linear-gradient(180deg, #709dca 85%, #ffffff 15%);
+}
+
+.promo__title {
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.promo__text {
+  margin-bottom: 27px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.promo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 67px;
+}
+
+.promo-btn {
+  padding: 15px 42px;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 281px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #a9a9a9;
+  padding: 15px 12px 15px 40px;
+  border: none;
+  border: 2px solid transparent;
+  margin: 0 10px 10px 0;
+}
+
+.form-input__img {
+  background-repeat: no-repeat;
+  background-position: 5%;
+}
+
+.form-input__img--person {
+  background-image: url("../assets/svg/rerson_icon.svg");
+}
+
+.form-input__img--email {
+  background-image: url("../assets/svg/email_icon.svg");
+}
+
+.form-input__img--phone {
+  background-image: url("../assets/svg/phone_icon.svg");
+}
+
+.form-input:focus {
+  outline: none;
+  border: 2px solid #ffbb42;
+}
+
+.laptop-wrap {
+  max-width: 647px;
+}
+
+.laptop-wrap__img {
+  margin-bottom: 23px;
+}
+
+.laptop-img {
+  width: 100%;
+}
+
+.buttons-circle .buttons-circle__icon {
+  margin-right: 9px;
+}
+
+.buttons-circle .buttons-circle__icon:last-child {
+  margin-right: 0;
+}
+
+.buttons-circle__icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #dedfe0;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.buttons-circle__icon--active {
+  border: 2px solid #1ca8dd;
+}
+
+.service__title {
+  margin-bottom: 16px;
+}
+
+.service__text {
+  margin-bottom: 84px;
 }
