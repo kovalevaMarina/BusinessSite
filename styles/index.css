@@ -237,6 +237,13 @@ body {
   text-align: center;
 }
 
+.title-h5 {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #394b50;
+}
+
 .txt--uppercase {
   text-transform: uppercase;
 }
@@ -246,7 +253,6 @@ body {
   line-height: 29px;
   font-weight: 400;
   color: #394b50;
-  text-align: center;
 }
 
 .title-h1 {
@@ -391,10 +397,43 @@ body {
   border: 2px solid #1ca8dd;
 }
 
+.service {
+  margin-bottom: 100px;
+}
+
 .service__title {
   margin-bottom: 16px;
 }
 
 .service__text {
   margin-bottom: 84px;
+  text-align: center;
+}
+
+.service-content__title {
+  margin-bottom: 15px;
+}
+
+.service-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 512px;
+  margin-bottom: 55px;
+  margin-right: 10px;
+}
+
+.service-img {
+  margin-right: 35px;
+}
+
+.service-img__icon {
+  width: 45px;
+  height: 45px;
+}
+
+.service-content__text {
+  font-size: 13px;
+  line-height: 16px;
+  color: #7b7b7b;
 }

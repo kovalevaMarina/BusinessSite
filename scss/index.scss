@@ -67,6 +67,13 @@ body {
  text-align: center;
 }
 
+.title-h5 {
+    font-size: $txt-middle;
+    line-height: $txt-middle-ln-height;
+    font-weight: 700;
+    color: $grey-dark;
+}
+
 .txt--uppercase {
     text-transform: uppercase;
 }
@@ -76,7 +83,6 @@ body {
     line-height: $txt-description-ln-height;
     font-weight: 400;
     color: $grey-dark;
-    text-align: center;
 }
 
 .title-h1 {
@@ -212,12 +218,40 @@ body {
 // styles for service section
 
 .service {
+    margin-bottom: 100px;
     &__title {
         margin-bottom: 16px;
     }
 
     &__text {
         margin-bottom: 84px;
+        text-align: center;
     }
+
+    &-content__title {
+        margin-bottom: 15px;
+    }
+
+    &-list__item {
+        display: flex;
+        max-width: 512px;
+        margin-bottom: 55px;
+        margin-right: 10px;
+    }
+
+    &-img {
+        margin-right: 35px;
+        &__icon {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    &-content__text {
+        font-size: $txt-main;
+        line-height: $txt-main-ln-height;
+        color: $grey-white-2;
+    }
+
 }
 
