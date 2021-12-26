@@ -437,3 +437,40 @@ body {
   line-height: 16px;
   color: #7b7b7b;
 }
+
+.about {
+  background-image: url("../assets/img/about_bg.jpg");
+  background-repeat: no-repeat;
+  background-color: #ffc155;
+  margin-bottom: 58px;
+}
+
+.about__content {
+  max-width: 475px;
+  padding: 155px 20px 174px 80px;
+  margin-left: auto;
+}
+
+.about__content-title {
+  color: #ffffff;
+  margin-bottom: 19px;
+  text-align: left;
+}
+
+.about__content-text {
+  color: #ffffff;
+  margin-bottom: 51px;
+}
+
+.about__content-link {
+  padding: 12px 31px 15px 31px;
+  color: #ffffff;
+  border: 1px solid #e7ad48;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about__content-link:hover {
+  color: #868686;
+  border: 1px solid #868686;
+}

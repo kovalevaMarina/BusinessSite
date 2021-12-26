@@ -255,3 +255,38 @@ body {
 
 }
 
+// styles for about block
+
+.about {
+    background-image: url("../assets/img/about_bg.jpg");
+    background-repeat: no-repeat;
+    background-color: $orange-2;
+    margin-bottom: 58px;
+    &__content {
+        max-width: 475px;
+        padding: 155px 20px 174px 80px;
+        margin-left: auto;
+    }
+
+    &__content-title {
+        color: $white;
+        margin-bottom: 19px;
+        text-align: left;
+    }
+
+    &__content-text {
+        color: $white;
+        margin-bottom: 51px;
+    }
+
+    &__content-link {
+        padding: 12px 31px 15px 31px;
+        color: $white;
+        border: 1px solid $brown;
+        transition: $transition-time;
+        &:hover {
+            color: $grey;
+            border: 1px solid $grey;
+        }
+    }
+}
