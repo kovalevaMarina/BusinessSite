@@ -23,19 +23,18 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
+    &-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-.flex-container-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.flex-container-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    &-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 body {
@@ -59,19 +58,34 @@ body {
 }
 // styles for text 
 
-.title-h2 {
- font-size: $fs-h2;
- line-height: $h2-ln-height;
- font-weight: 900;
- color: $grey-dark;
- text-align: center;
-}
+.title {
+    &-h1 {
+        font-size: $fs-h1;
+        line-height: $h1-ln-height;
+        font-weight: 900;
+    }
 
-.title-h5 {
-    font-size: $txt-middle;
-    line-height: $txt-middle-ln-height;
-    font-weight: 700;
-    color: $grey-dark;
+    &-h2 {
+        font-size: $fs-h2;
+        line-height: $h2-ln-height;
+        font-weight: 900;
+        color: $grey-dark;
+        text-align: center;
+    }
+
+    &-h3 {
+        font-size: $fs-h3;
+        line-height: $h2-ln-height;
+        font-weight: 300;
+        color: $grey-white-3;
+    }
+
+    &-h5 {
+        font-size: $txt-middle;
+        line-height: $txt-middle-ln-height;
+        font-weight: 700;
+        color: $grey-dark;
+    }
 }
 
 .txt--uppercase {
@@ -83,45 +97,46 @@ body {
     line-height: $txt-description-ln-height;
     font-weight: 400;
     color: $grey-dark;
-}
-
-.title-h1 {
-    font-size: $fs-h1;
-    line-height: $h1-ln-height;
-    font-weight: 900;
+    text-align: center;
 }
 
 // styles for header section
 
-.logo-wrap {
-    padding: 22px 0;
-}
+.logo {
+    &-wrap {
+        padding: 21px 0;
+    }
 
-.logo-link {
-    display: inline-block;
-    transition: $transition-time;
-    &:hover {
-        opacity: 0.7;
+    &-link {
+        display: inline-block;
+        transition: $transition-time;
+        &:hover {
+            opacity: 0.7;
+        } 
     }
 }
 
-.menu-list__item {
-    margin-right: 5px;
-}
-
-.menu-list__link {
-    display: inline-block;
-    font-size: $txt-main;
-    line-height: $txt-main-ln-height;
-    font-weight: 400;
-    padding: 9px 20px;
-    color: $grey;
-    text-transform: uppercase;
-    transition: $transition-time;
-    &:hover {
-        background-color: $orange;
-        color: $white;
+.menu-list {
+    padding: 10px 0;
+    &__item {
+        margin-right: 5px;
     }
+
+    &__link {
+        display: inline-block;
+        font-size: $txt-main;
+        line-height: $txt-main-ln-height;
+        font-weight: 400;
+        padding: 9px 20px;
+        color: $grey;
+        text-transform: uppercase;
+        transition: $transition-time;
+        &:hover {
+            background-color: $orange;
+            color: $white;
+        } 
+    }
+
 }
 
 // styles for promo section
@@ -140,7 +155,6 @@ body {
     &__text {
         margin-bottom: 27px;
         color: $white;
-        text-align: center;
     }
 
     &-form {
@@ -184,15 +198,17 @@ body {
     }
 }
 
-.laptop-wrap {
-    max-width: 647px;
-    &__img {
-        margin-bottom: 23px;
+.laptop {
+    &-wrap {
+        max-width: 647px;
+        &__img {
+            margin-bottom: 23px;
+        }
     }
-}
 
-.laptop-img {
-    width: 100%;
+    &-img {
+        width: 100%;
+    }
 }
 
 .buttons-circle {
@@ -202,6 +218,7 @@ body {
             margin-right: 0;
         }
     }
+
     &__icon {
         width: 15px;
         height: 15px;
@@ -225,7 +242,10 @@ body {
 
     &__text {
         margin-bottom: 84px;
-        text-align: center;
+    }
+
+    &-list {
+        margin: 0 -15px;
     }
 
     &-content__title {
@@ -235,8 +255,8 @@ body {
     &-list__item {
         display: flex;
         max-width: 512px;
+        margin: 0 15px;
         margin-bottom: 55px;
-        margin-right: 10px;
     }
 
     &-img {
@@ -266,6 +286,7 @@ body {
         max-width: 475px;
         padding: 155px 20px 174px 80px;
         margin-left: auto;
+        background-color: $orange-2;
     }
 
     &__content-title {
@@ -287,6 +308,101 @@ body {
         &:hover {
             color: $grey;
             border: 1px solid $grey;
+        }
+    }
+}
+
+// styles for price section 
+
+.price {
+    background-color: $blue-extra-white;
+    padding: 98px 0 164px;
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin-bottom: 54px;
+    }
+
+    &-list {
+        display: flex;
+        &__item {
+            max-width: 391px;
+            padding: 50px 28px 48px 28px;
+            margin: 30px 0;
+            background-color: $white;
+            border: 1px solid $blue-extra-white-3;
+        }
+
+        &__title {
+            margin-bottom: 7px;
+        }
+    }
+
+    &-number__wrap {
+        margin-bottom: 42px;
+    }
+
+    &-number__count {
+        font-size: $txt-large;
+        line-height: $txt-large-ln-height;
+        color: $orange;
+        font-weight: 700;
+        &--sup {
+            font-size: $txt-description;
+            line-height: $txt-description-ln-height;
+            vertical-align: top;
+        }
+    }
+
+    &-number__text {
+        font-size: $txt-card;
+        line-height: $txt-card-ln-height;
+        font-weight: 300;
+        color: $grey-white-3;
+    }
+
+    &-offer__list {
+        width: 329px;
+        text-align: center;
+        margin-bottom: 31px;
+    }
+
+    &-offer__item {
+        font-size: $txt-main;
+        line-height: $txt-main-ln-height;
+        font-weight: 400;
+        color: $grey-white-4;
+        text-transform: uppercase;
+        &--border {
+            padding: 12px 0;
+            border-top: 1px solid $blue-extra-white-2;
+        }
+    }
+
+    &__btn {
+        padding: 12px 20px;
+    }
+
+    &-list__item--active {
+        max-width: 395px;
+        padding: 76px 34px 84px 32px;
+        background-color: $blue;
+        border: none;
+        border-radius: 2px;
+        .title-h3,
+        .price-number__count,
+        .price-number__text {
+            color: $white;
+        }
+
+        .price-offer__item--border {
+            border-top: 1px solid $blue-2;
+        }
+
+        .price-offer__item {
+            color: $blue-extra-white-4;
         }
     }
 }
