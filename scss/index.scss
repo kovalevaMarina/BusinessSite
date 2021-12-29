@@ -70,14 +70,20 @@ body {
         line-height: $h2-ln-height;
         font-weight: 900;
         color: $grey-dark;
-        text-align: center;
     }
 
     &-h3 {
         font-size: $fs-h3;
-        line-height: $h2-ln-height;
+        line-height: $h3-ln-height;
         font-weight: 300;
         color: $grey-white-3;
+    }
+
+    &-h4 {
+        font-size: $fs-h4;
+        line-height: $h4-ln-height;
+        font-weight: 700;
+        color: $grey-dark;
     }
 
     &-h5 {
@@ -88,8 +94,21 @@ body {
     }
 }
 
-.txt--uppercase {
-    text-transform: uppercase;
+.txt {
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &-content {
+        font-size: $txt-main;
+        line-height: $txt-main-ln-height;
+        font-weight: 400;
+        color: $grey-white-2;
+    }
 }
 
 .text-description {
@@ -266,13 +285,6 @@ body {
             height: 45px;
         }
     }
-
-    &-content__text {
-        font-size: $txt-main;
-        line-height: $txt-main-ln-height;
-        color: $grey-white-2;
-    }
-
 }
 
 // styles for about block
@@ -387,7 +399,7 @@ body {
 
     &-list__item--active {
         max-width: 395px;
-        padding: 76px 34px 84px 32px;
+        padding: 76px 35px 84px 32px;
         background-color: $blue;
         border: none;
         border-radius: 2px;
@@ -403,6 +415,85 @@ body {
 
         .price-offer__item {
             color: $blue-extra-white-4;
+        }
+    }
+}
+
+// styles for works section
+
+.works {
+    padding: 59px 0 149px;
+    &__title {
+        margin-bottom: 14px;
+    }
+
+    &__text {
+        margin-bottom: 83px;
+    }
+
+    &__step {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 103px;
+        padding: 0 20px;
+        &-item {
+            max-width: 229px;
+            min-width: 120px;
+        }
+
+        &-icon {
+            width: 121px;
+            height: 121px;
+            margin: 0 auto 66px;
+            &--center {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        &-title {
+            margin-bottom: 21px;
+        }
+
+        &-arrow {
+            width: 71px;
+            height: 150px;
+            position: relative;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        width: calc(100% + 60px);
+        left: -25px;
+        &-top {
+            top: 0;
+        }
+
+        &-bottom {
+            bottom: 0;
+            transform: scale(-1);
+        }
+    }
+
+    &__btn {
+        padding: 13px 26px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .works {
+        &__arrow {
+            display: none;
+        }
+
+        &__step {
+            margin: 0 -15px 103px;  
+        }
+
+        &__step-item {
+            margin: 0 10px 10px;
         }
     }
 }
