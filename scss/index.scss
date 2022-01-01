@@ -35,6 +35,12 @@
         flex-direction: column;
         align-items: center;
     }
+
+    &-between {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 body {
@@ -479,6 +485,83 @@ body {
 
     &__btn {
         padding: 13px 26px;
+    }
+}
+
+// styles for clients section
+
+.reviews {
+    padding: 66px 0 160px;
+    background-color: $orange-2;
+    &__title {
+        color: $white;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        color: $white;
+        margin-bottom: 92px;
+    }
+
+    &-list {
+        margin-right: -10px;
+        &__item {
+            max-width: 567px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            padding: 36px 9px 42px 30px;
+            background-color: $white;
+        }
+
+        &__wrap-img {
+            width: 121px;
+            height: 121px;
+            margin-right: 13px;
+        }
+
+        &__avatar {
+            border-radius: 50%;
+        }
+
+        &__qoute {
+            position: relative;
+            max-width: 390px;
+            padding-left: 24px;
+             &::before, &::after {
+                 font-family: "Lato", sans-serif;
+                 font-size: $fs-h2;
+                 line-height: $h2-ln-height;
+                 color: $grey-white-2;
+                 position: absolute;
+             }
+
+             &::before {
+                 content: "“";
+                 left: 8px;
+                 top: -12px;
+             }
+
+             &::after {
+                 content: "“";
+                 transform: rotateY(180deg);
+                 left: 192px;
+                 bottom: 20px;
+                }
+                
+            &-txt {
+                line-height: 20px;
+                margin-bottom: 32px;
+            }
+
+            &-author {
+                font-size: $txt-btn;
+                line-height: $txt-btn-ln-height;
+                color: $grey-white-5;
+                &--orange {
+                    color: $orange-3;
+                }
+            }
+        }
     }
 }
 
