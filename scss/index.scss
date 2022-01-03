@@ -30,6 +30,7 @@
         line-height: $txt-main-ln-height;
         font-weight: 400;
         padding: 9px 20px;
+        border-radius: 2px;
         color: $grey;
         text-transform: uppercase;
         transition: $transition-time;
@@ -43,9 +44,12 @@
 // styles for promo section
 
 .promo {
-    padding-top: 82px;
-    margin-bottom: 74px;
     background: linear-gradient(180deg, $blue 85%, $white 15%);
+    &__wrap {
+        padding-top: 82px;
+        margin-bottom: 74px;
+    }
+
     &__title {
         margin-bottom: 16px;
         color: $white;
@@ -113,18 +117,18 @@
 
 .buttons-circle {
     .buttons-circle__icon {
-        margin-right: 9px;
+        margin: 0 9px;
         &:last-child {
             margin-right: 0;
         }
     }
 
     &__icon {
-        width: 15px;
-        height: 15px;
+        display: inline-block;
+        padding: 6.5px;
         border-radius: 50%;
         border: 2px solid $grey-extra-white;
-        background-color: $white;
+        background-color: transparent;
         transition: $transition-time;
         &--active {
             border: 2px solid $blue-white;
@@ -171,15 +175,24 @@
 // styles for about block
 
 .about {
-    background-image: url("../assets/img/about_bg.jpg");
-    background-repeat: no-repeat;
     background-color: $orange-2;
+    min-height: 623px;
     margin-bottom: 58px;
+    &-image {
+        background-image: url("../assets/img/about_bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+    }
+
+    &__wrap {
+        width: 50%;
+    }
+
     &__content {
+        height: 100%;
         max-width: 475px;
         padding: 155px 20px 174px 80px;
-        margin-left: auto;
-        background-color: $orange-2;
     }
 
     &__content-title {
@@ -187,12 +200,12 @@
         margin-bottom: 19px;
         text-align: left;
     }
-
+        
     &__content-text {
         color: $white;
         margin-bottom: 51px;
     }
-
+        
     &__content-link {
         padding: 12px 31px 15px 31px;
         color: $white;
@@ -628,6 +641,24 @@
 
         &__step-item {
             margin: 0 10px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .about {
+        min-height: 500px;
+        &-image {
+            width: 100%;
+        }
+
+        &__wrap {
+            width: 100%;
+        }
+    
+        &__content {
+            padding: 15px;
+            max-width: 100%;
         }
     }
 }
