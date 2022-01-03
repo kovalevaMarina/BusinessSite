@@ -1,0 +1,136 @@
+// general styles
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-section {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-between {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &-d {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: $txt-main;
+    line-height: $txt-main-ln-height;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    font-size: $txt-btn;
+    line-height: $txt-btn-ln-height;
+    font-weight: 400;
+    color: $white;
+    background-color: $orange;
+    border-radius: 3px;
+    transition: $transition-time;
+    &:hover {
+        background-color: $grey;
+    }
+}
+// styles for text 
+
+.title {
+    &-h1 {
+        font-size: $fs-h1;
+        line-height: $h1-ln-height;
+        font-weight: 900;
+    }
+
+    &-h2 {
+        font-size: $fs-h2;
+        line-height: $h2-ln-height;
+        font-weight: 900;
+        color: $grey-dark;
+    }
+
+    &-h3 {
+        font-size: $fs-h3;
+        line-height: $h3-ln-height;
+        font-weight: 300;
+        color: $grey-white-3;
+    }
+
+    &-h4 {
+        font-size: $fs-h4;
+        line-height: $h4-ln-height;
+        font-weight: 700;
+        color: $grey-dark;
+    }
+
+    &-h5 {
+        font-size: $txt-middle;
+        line-height: $txt-middle-ln-height;
+        font-weight: 700;
+        color: $grey-dark;
+    }
+
+    &-h6 {
+        font-size: $fs-h6;
+        line-height: $h6-ln-height;
+        font-weight: 700;
+        color: $white;
+    }
+}
+
+.txt {
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &-content {
+        font-size: $txt-main;
+        line-height: $txt-main-ln-height;
+        font-weight: 400;
+        color: $grey-white-2;
+    }
+}
+
+.text-description {
+    font-size: $txt-description;
+    line-height: $txt-description-ln-height;
+    font-weight: 400;
+    color: $grey-dark;
+    text-align: center;
+}
