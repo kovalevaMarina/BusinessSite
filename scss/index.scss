@@ -445,6 +445,8 @@
 // styles for contacts section
 
 .contact {
+    padding-top: 80px;
+    margin-bottom: 57px;
     background-color: $white;
     &__title {
         margin-bottom: 16px;
@@ -525,6 +527,90 @@
             transition: $transition-time;
             &:hover {
                 color: $blue-white;
+            }
+        }
+    }
+}
+
+// styles for footer section
+
+.footer {
+    &-top {
+        &__wrap {
+            padding-top: 65px;
+            margin-bottom: 49px;
+            &--border {
+                border-top: 1px solid $grey-white-8;
+            }
+        }
+
+        &__phone {
+            margin-bottom: 14px;
+            &--link {
+                position: relative;
+                font-size: $txt-phone;
+                line-height: $txt-phone-ln-height;
+                font-weight: 400;
+                color: $grey-dark;
+                padding-left: 22px;
+                transition: $transition-time;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-image: url("../assets/svg/phone_icon_lg.svg");
+                    width: 18px;
+                    height: 18px;
+                    left: 0;
+                    top: 5px;
+                }
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        background: linear-gradient(180deg, $blue 90%, $white 10%);
+        &__copyright {
+            font-family: "Roboto", sans-serif;
+            font-size: $txt-main;
+            line-height: $txt-copyright-ln-height;
+            font-weight: 400;
+            color: $white;
+            padding: 14px 0;
+        }
+    }
+
+    .menu-list {
+        padding: 0;
+        margin-bottom: 21px;
+    }
+
+    .menu-list__link {
+        color: $grey-dark;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.social-list {
+    &__item {
+        margin-right: 14px;
+        &:last-child {
+            margin-right: 0;
+        } 
+    }
+
+    &__link {
+        display: inline-block;
+        cursor: pointer;
+        &--icon {
+            transition: $transition-time;
+            &:hover {
+                fill: $orange;
             }
         }
     }
