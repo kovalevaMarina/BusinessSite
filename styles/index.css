@@ -382,11 +382,17 @@ body {
 
 .promo-btn {
   padding: 15px 42px 16px;
-  margin-bottom: 10px;
+  width: 100%;
+}
+
+.form__wrap {
+  min-width: 281px;
+  padding: 8px 5px;
+  width: 25%;
 }
 
 .form-input {
-  width: 281px;
+  width: 100%;
   font-size: 13px;
   line-height: 16px;
   color: #a9a9a9;
@@ -394,7 +400,6 @@ body {
   border: none;
   border: 1px solid #cbcbcb;
   border-radius: 3px;
-  margin: 0 10px 10px 0;
 }
 
 .form-input__img {
@@ -511,7 +516,19 @@ body {
 .about__content {
   height: 100%;
   max-width: 475px;
-  padding: 155px 20px 174px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .about__content-title {
@@ -743,7 +760,7 @@ body {
 .reviews-list__wrap-img {
   width: 121px;
   height: 121px;
-  margin-right: 13px;
+  margin: 0 13px 10px 0;
 }
 
 .reviews-list__avatar {
@@ -808,10 +825,18 @@ body {
 }
 
 .contact-form {
-  margin-bottom: 53px;
+  max-width: 934px;
+  margin: 0 auto 53px;
+}
+
+.contact-form .form__wrap {
+  min-width: 311px;
+  padding: 8px 5px;
+  width: 33.33333%;
 }
 
 .contact-btn {
+  width: 100%;
   padding: 15px 51px 15px 53px;
 }
 
@@ -988,12 +1013,27 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .price-list {
+    margin: -15px;
+  }
+  .price-list__item {
+    margin: 15px;
+  }
+  .price-list__item--active {
+    max-width: 391px;
+    padding: 50px 28px 48px 28px;
+    margin: 15px;
+  }
+}
+
 @media screen and (max-width: 785px) {
   .about {
     min-height: 500px;
   }
   .about-image {
     width: 100%;
+    height: 185px;
   }
   .about__wrap {
     width: 100%;
