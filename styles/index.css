@@ -314,18 +314,122 @@ body {
   text-align: center;
 }
 
+@-webkit-keyframes anim-circle-crop--blue {
+  from {
+    stroke-dashoffset: 135.02px;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 48px;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-circle-crop--blue {
+  from {
+    stroke-dashoffset: 135.02px;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 48px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes anim-circle-crop--green {
+  from {
+    stroke-dashoffset: 97.34px;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 40px;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-circle-crop--green {
+  from {
+    stroke-dashoffset: 97.34px;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 40px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes anim-circle-crop--orange {
+  from {
+    stroke-dashoffset: 59.66px;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-circle-crop--orange {
+  from {
+    stroke-dashoffset: 59.66px;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 30px;
+    opacity: 1;
+  }
+}
+
 .logo-wrap {
   padding: 21px 0;
 }
 
 .logo-link {
-  display: inline-block;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .logo-link:hover {
   opacity: 0.7;
+}
+
+.logo-svg {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-svg__circle {
+  cx: 25px;
+  cy: 25px;
+  stroke-width: 3.5px;
+  fill: transparent;
+}
+
+.logo-svg__circle--blue {
+  r: 21.5px;
+  stroke: #1ca8dd;
+  stroke-dasharray: 135.02px;
+  stroke-dashoffset: 48px;
+  -webkit-animation: anim-circle-crop--blue 1s ease forwards 1;
+          animation: anim-circle-crop--blue 1s ease forwards 1;
+}
+
+.logo-svg__circle--green {
+  r: 15.5px;
+  stroke: #9aca40;
+  stroke-dasharray: 97.34px;
+  stroke-dashoffset: 40px;
+  -webkit-animation: anim-circle-crop--green 1s 40ms ease forwards 1;
+          animation: anim-circle-crop--green 1s 40ms ease forwards 1;
+}
+
+.logo-svg__circle--orange {
+  r: 9.5px;
+  stroke: #f6772c;
+  stroke-dasharray: 59.66px;
+  stroke-dashoffset: 30px;
+  -webkit-animation: anim-circle-crop--orange 1s 80ms ease forwards 1;
+          animation: anim-circle-crop--orange 1s 80ms ease forwards 1;
 }
 
 .menu-list {

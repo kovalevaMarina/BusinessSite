@@ -1,6 +1,7 @@
 @import "./var";
 @import "./reset";
 @import "./common";
+@import "./animation";
 
 // styles for header section
 
@@ -10,11 +11,44 @@
     }
 
     &-link {
-        display: inline-block;
         transition: $transition-time;
         &:hover {
             opacity: 0.7;
-        } 
+        }
+    }
+
+    &-svg {
+        width: $logo-svg--width;
+        height: $logo-svg--width;
+        &__circle {
+            cx: $logo-svg--width / 2;
+            cy: $logo-svg--width / 2;
+            stroke-width: $circle--stroke-width;
+            fill: transparent;
+            &--blue {
+                r: $circle-blue--radius;
+                stroke: $blue-white;
+                stroke-dasharray: $circle-blue--length;
+                stroke-dashoffset: $circle-blue--cropped-length;
+                animation: anim-circle-crop--blue 1s ease forwards 1;
+            }
+
+            &--green {
+                r: $circle-green--radius;
+                stroke: $green;
+                stroke-dasharray: $circle-green--length;
+                stroke-dashoffset: $circle-green--cropped-length;
+                animation: anim-circle-crop--green 1s 40ms ease forwards 1;
+            }
+
+            &--orange {
+                r: $circle-orange--radius;
+                stroke: $orange-3;
+                stroke-dasharray: $circle-orange--length;
+                stroke-dashoffset: $circle-orange--cropped-length;
+                animation: anim-circle-crop--orange 1s 80ms ease forwards 1;
+            }
+        }
     }
 }
 

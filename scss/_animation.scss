@@ -1,0 +1,32 @@
+@keyframes anim-circle-crop--blue {
+    from {
+        stroke-dashoffset: $circle-blue--length;
+        opacity: 0;
+    }
+    to {
+        stroke-dashoffset: $circle-blue--cropped-length;
+        opacity: 1;
+    }
+}
+
+@keyframes anim-circle-crop--green {
+    from {
+        stroke-dashoffset: $circle-green--length;
+        opacity: 0;
+    }
+    to {
+        stroke-dashoffset: $circle-green--cropped-length;
+        opacity: 1;
+    }
+}
+
+@keyframes anim-circle-crop--orange {
+    from {
+        stroke-dashoffset: $circle-orange--length;
+        opacity: 0;
+    }
+    to {
+        stroke-dashoffset: $circle-orange--cropped-length;
+        opacity: 1;
+    }
+}
