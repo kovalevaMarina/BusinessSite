@@ -218,7 +218,6 @@
 .about {
     background-color: $orange-2;
     min-height: 623px;
-    margin-bottom: 58px;
     &-image {
         background-image: url("../assets/img/about_bg.jpg");
         background-repeat: no-repeat;
@@ -247,6 +246,7 @@
         
     &__content-text {
         color: $white;
+        line-height: $txt-middle-ln-height;
         margin-bottom: 51px;
     }
         
@@ -450,7 +450,7 @@
         &__wrap-img {
             width: 121px;
             height: 121px;
-            margin: 0 13px 10px 0;
+            margin-right: 13px;
         }
 
         &__avatar {
@@ -680,21 +680,6 @@
     }
 }
 
-@media screen and (max-width: 992px) {
-    .works {
-        &__arrow {
-            display: none;
-        }
-
-        &__step {
-            margin: 0 -15px 103px;  
-        }
-
-        &__step-item {
-            margin: 0 10px 10px;
-        }
-    }
-}
 
 @media screen and (max-width: 1200px) {
     .price {
@@ -709,6 +694,18 @@
                 padding: 50px 28px 48px 28px;
                 margin: 15px; 
             }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .works {
+        &__step-arrow {
+            display: none;
+        }
+
+        &__step-item {
+            margin-top: 15px;
         }
     }
 }
@@ -728,6 +725,20 @@
         &__content {
             padding: 15px;
             max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .price {
+        &-list__item {
+            width: 100%;
+            &--active {
+                width: 100%;
+            }
+        }
+        &-offer__list {
+            width: 100%;
         }
     }
 }

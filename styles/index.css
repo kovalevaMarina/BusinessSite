@@ -215,8 +215,6 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .flex-container-d {
@@ -603,7 +601,6 @@ body {
 .about {
   background-color: #ffc155;
   min-height: 623px;
-  margin-bottom: 58px;
 }
 
 .about-image {
@@ -643,6 +640,7 @@ body {
 
 .about__content-text {
   color: #ffffff;
+  line-height: 19px;
   margin-bottom: 51px;
 }
 
@@ -864,7 +862,7 @@ body {
 .reviews-list__wrap-img {
   width: 121px;
   height: 121px;
-  margin: 0 13px 10px 0;
+  margin-right: 13px;
 }
 
 .reviews-list__avatar {
@@ -1105,18 +1103,6 @@ body {
   fill: #ffbb42;
 }
 
-@media screen and (max-width: 992px) {
-  .works__arrow {
-    display: none;
-  }
-  .works__step {
-    margin: 0 -15px 103px;
-  }
-  .works__step-item {
-    margin: 0 10px 10px;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   .price-list {
     margin: -15px;
@@ -1128,6 +1114,15 @@ body {
     max-width: 391px;
     padding: 50px 28px 48px 28px;
     margin: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .works__step-arrow {
+    display: none;
+  }
+  .works__step-item {
+    margin-top: 15px;
   }
 }
 
@@ -1145,5 +1140,17 @@ body {
   .about__content {
     padding: 15px;
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .price-list__item {
+    width: 100%;
+  }
+  .price-list__item--active {
+    width: 100%;
+  }
+  .price-offer__list {
+    width: 100%;
   }
 }
