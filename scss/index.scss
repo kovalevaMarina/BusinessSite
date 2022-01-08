@@ -276,7 +276,6 @@
     }
 
     &-list {
-        display: flex;
         &__item {
             max-width: 391px;
             padding: 50px 28px 48px 28px;
@@ -635,7 +634,7 @@
     }
 
     &-bottom {
-        background: linear-gradient(180deg, $blue 90%, $white 10%);
+        background-color: $blue;
         &__copyright {
             font-family: "Roboto", sans-serif;
             font-size: $txt-main;
@@ -683,6 +682,7 @@
 @media screen and (max-width: 1200px) {
     .price {
         &-list {
+            justify-content: center;
             margin: -15px;
         }
         
@@ -733,6 +733,10 @@
         &__wrap{
             width: 100%;
         }
+    }
+
+    .service {
+        margin-bottom: 50px;
     }
     
     .price {

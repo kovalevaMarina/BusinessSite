@@ -670,12 +670,6 @@ body {
   margin-bottom: 54px;
 }
 
-.price-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .price-list__item {
   max-width: 391px;
   padding: 50px 28px 48px 28px;
@@ -1055,8 +1049,7 @@ body {
 }
 
 .footer-bottom {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #709dca), color-stop(10%, #ffffff));
-  background: linear-gradient(180deg, #709dca 90%, #ffffff 10%);
+  background-color: #709dca;
 }
 
 .footer-bottom__copyright {
@@ -1105,6 +1098,9 @@ body {
 
 @media screen and (max-width: 1200px) {
   .price-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: -15px;
   }
   .price-list__item {
@@ -1146,6 +1142,9 @@ body {
 @media screen and (max-width: 450px) {
   .form__wrap {
     width: 100%;
+  }
+  .service {
+    margin-bottom: 50px;
   }
   .price-list__item {
     width: 100%;
