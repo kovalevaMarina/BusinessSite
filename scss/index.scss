@@ -458,33 +458,32 @@
         }
 
         &__qoute {
-            position: relative;
             max-width: 390px;
-            padding-left: 24px;
-             &::before, &::after {
-                 font-family: "Lato", sans-serif;
-                 font-size: $fs-h2;
-                 line-height: $h2-ln-height;
-                 color: $grey-white-2;
-                 position: absolute;
-             }
-
-             &::before {
-                 content: "“";
-                 left: 8px;
-                 top: -12px;
-             }
-
-             &::after {
-                 content: "“";
-                 transform: rotateY(180deg);
-                 left: 192px;
-                 bottom: 20px;
-                }
-                
+            padding-left: 24px;    
             &-txt {
+                position: relative;
                 line-height: 20px;
                 margin-bottom: 32px;
+                &::before, &::after {
+                    font-family: "Lato", sans-serif;
+                    font-size: $fs-h2;
+                    line-height: $h2-ln-height;
+                    color: $grey-white-2;
+                    position: absolute;
+                }
+   
+                &::before {
+                    content: "“";
+                    left: -13px;
+                    top: -12px;
+                }
+   
+                &::after {
+                    content: "“";
+                    transform: rotateY(180deg);
+                    left: 182px;
+                    bottom: -28px;
+                }
             }
 
             &-author {
@@ -730,6 +729,12 @@
 }
 
 @media screen and (max-width: 450px) {
+    .form {
+        &__wrap{
+            width: 100%;
+        }
+    }
+    
     .price {
         &-list__item {
             width: 100%;
@@ -737,8 +742,29 @@
                 width: 100%;
             }
         }
+
         &-offer__list {
             width: 100%;
         }
+    }
+
+    .reviews-list {
+        &__item {
+            padding-left: 15px;
+            padding-right: 20px;
+        }
+
+        &__wrap-img {
+            margin-right: 0;
+        }
+
+        &__qoute-txt::after {
+            left: 100px;
+            bottom: -33px;
+        }
+    }
+
+    .contact-form .form__wrap {
+        min-width: 100%;
     }
 }
